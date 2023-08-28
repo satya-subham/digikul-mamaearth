@@ -195,9 +195,12 @@ button[id="login"]:hover {
   justify-content: space-around;
   font-weight: bold;
   font-family: sans-serif;
+  transition-duration: .5s;
 }
 .item-container:hover {
   cursor: pointer;
+  box-shadow: 2px 2px 6px 4px rgba(167, 149, 149, 0.75);
+
 }
 .item-container img {
   width: 200px;
@@ -227,6 +230,7 @@ button[id="login"]:hover {
   color: white;
   font-size: larger;
   margin-bottom: -13px;
+  transition-duration: 1s;
 }
 .add-to-cart-btn:hover {
   background-color: white;
