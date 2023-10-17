@@ -20,8 +20,31 @@
             </div>
             <div class="cart-login">
                 <a href=""><img src="vip-desktop-join.webp" alt="" id="flower"></a>
-                <button id="cart"><i class="fa-solid fa-cart-shopping"></i>Cart</button>
-                <button id="login"><i class="fa-regular fa-user"></i>Log In</button>
+                <button id="cart"><i class="fa-solid fa-cart-arrow-down"></i>Cart</button>
+                <button id="login" onmouseover="toggleMenu()"><i class="fa-regular fa-circle-user"></i>Log In</button>
+            </div>
+        </div>
+        <div class="sub-menu-wrap" id="subMenu" onmouseleave="toggleMenuRemove()">
+            <div class="sub-menu">
+                <div class="user-info">
+                    <a href="/yourProfile/profile.html" class=".profile">
+                        <li> <i class="fa-regular fa-user" id="popup"></i> &nbsp; Your Profile </li>
+                    </a>
+                    <hr>
+                    <li><i class="fa-solid fa-cart-shopping" id="popup"></i> &nbsp;Your Orders</li>
+                    <hr>
+                    <li class="third"><i class="fa-solid fa-gift" id="popup"> </i>
+                         <span class="goodness good">gôodness</span> <span
+                                class="insider">ìnsider</span>
+                        
+                    </li>
+                    <hr>
+                    <li><i class="fa-solid fa-location-dot" id="popup"></i> &nbsp; Manage Address</li>
+                    <hr>
+                    <li><i class="fa-solid fa-phone" id="popup"></i> &nbsp;Contact US</li>
+                    <hr>
+                    <li><button class="logbut" onclick="login()" id="isLogin">LOGIN</button></li>
+                </div>
             </div>
         </div>
         <nav>

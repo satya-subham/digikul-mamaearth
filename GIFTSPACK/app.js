@@ -212,7 +212,7 @@ if(localStorage.getItem('cartCheckout')){
 
 window.addEventListener('DOMContentLoaded', (()=>{
     cartArr.map((item)=>{
-        console.log(item)
+        // console.log(item)
         cart_content3.innerHTML+=`<div class="cart_data" id="cont${item.id}" >
       <div><img src=${item.images[0]} alt="mamaearth" class="cart_image_name"></div>
       <div class="cart-img-text"><p class="image_name" >${item.name}</p>
