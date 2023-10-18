@@ -80,6 +80,12 @@ const loginPopUpMainContainer = document.querySelector(
   ".login_popup_main_container"
 );
 
+let userData = [];
+if(localStorage.getItem('userData')){
+  userData= JSON.parse(localStorage.getItem('userData'))
+}
+console.log(userData);
+
 function login() {
   if(loginBtn.innerText=="LOGIN"){
     cartContainer.style.display = "block";
@@ -125,10 +131,7 @@ function backToLogin() {
 }
 
 
-let userData = [];
-if(localStorage.getItem('userData')){
-  userData= JSON.parse(localStorage.getItem('userData'))
-}
+
 signUpBtn.addEventListener("click", () => {
   const fName = document.querySelector("#signup_first_name").value;
   const lName = document.querySelector("#signup_last_name").value;
