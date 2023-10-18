@@ -420,6 +420,229 @@ button[id="login"]:hover{
   color: rgb(98, 89, 106);
 }
 
+
+/****************************** LOGIN *************************/
+
+.login_popup_main_container{
+  width: 400px;
+  height: 600px;
+  background-color: white;
+  position: fixed;
+  top: 50px;
+  left: 40%;
+  border-radius: 10px;
+  display: none;
+  border: 1px solid black;
+  z-index: 4;
+}
+
+
+.login_popup{
+  height: auto;
+  width: auto;
+}
+
+.login_heading {
+  margin: 10px 45px;
+  font-weight: 700;
+  display: block;
+  color: black;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.ligin_mamacash {
+  margin: 30px 22px;
+}
+
+.login_img_text {
+  display: flex;
+  color: white;
+  margin: 10px 22px;
+}
+
+.login_input {
+  margin: 20px 20px;
+}
+
+.login_input input {
+  width: 340px;
+  height: 40px;
+  font-size: 16px;
+  padding-left: 15px;
+  border-radius: 10px;
+  border: 1px solid black;
+}
+
+.login_term_condition {
+  margin: 30px 20px;
+  font-size: 17px;
+  color: black;
+}
+
+.login_with_otp {
+  width: 350px;
+  height: 40px;
+  margin: 10px 20px;
+  background-color: rgb(72, 180, 247);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+#cross {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  border: none;
+  background-color: darkgray;
+}
+
+
+
+/**************************** SIGN UP *************************/
+
+.signup_popup{
+  width: 400px;
+  height: 500px;
+  background-color: white;
+  display: none;
+}
+.signup_heading{
+  margin: 10px 40px;
+  font-weight: 700;
+  display: block;
+  color: black;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.signup_input{
+  margin: 20px 20px;
+}
+.signup_input input{
+  width: 330px;
+  height: 30px;
+  padding-left: 15px;
+  border: 1px solid black;
+}
+
+.signup_gender{
+  margin: 20px 20px;
+  color: black;
+}
+.signup_gender input{
+  width: 15px;
+}
+
+#signup_btn{
+  width: 350px;
+  height: 40px;
+  margin: 10px 20px;
+  background-color: rgb(59, 174, 245);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+#signup_left_arrow{
+  position: absolute;
+  top: 23px;
+  left: 10px;
+  background: none;
+  border: none;
+  color: black;
+}
+
+
+
+/***************************** SIGN IN *************************/
+
+.signin_popup{
+  width: 400px;
+  height: 500px;
+  background-color: white;
+  display: none;
+}
+
+.signin_heading{
+  margin: 10px 80px;
+  font-weight: 700;
+  display: block;
+  color: black;
+  font-family: serif;
+}
+
+.signin_email{
+  margin: 20px 20px;
+}
+
+.signin_email input{
+  width: 330px;
+  height: 30px;
+  padding-left: 15px;
+  border: 1px solid black;
+}
+
+#signin_btn{
+  width: 350px;
+  height: 40px;
+  margin: 10px 20px;
+  background-color: rgb(62, 181, 255);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+#signin_cross {
+  background: none;
+  border: none;
+}
+.user-info a {
+  color: black;
+  text-decoration: none;
+  position: relative;
+  right: 10px;
+}
+.user-info a li:hover {
+  color: rgb(0, 175, 239);
+}
+
+
+/****************************** LOG OUT ***********************/
+
+.logout_popup{
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  top: 200px;
+  left: 40%;
+  display: none;
+  background-color: white;
+  z-index: 3;
+  border-radius: 50%;
+  text-align: center;
+  /* box-shadow: 2px 1px 5px 1px rgba(0,0,0,0.66); */
+}
+
+#logout{
+  width: 80px;
+  height: 80px;
+  margin: 50px 70px;
+  border-radius: 50%;
+  font-size: 50px;
+  border: 2px solid yellow;
+  background-color: orange;
+  color: white;
+}
+.logout{
+  color: green;
+}
+
+
+
+
 /* ********************************* CART ************************** */
 
 .cart-container{
