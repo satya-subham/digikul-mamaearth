@@ -184,31 +184,34 @@ signInBtn.addEventListener('click', ()=>{
     if (userData[i].userEmail == signInEmail) {
       loginPopUpMainContainer.style.display = "none";
       cartContainer.style.display = "none";
-body.style.overflow = "auto";
-    loginBtn.innerHTML="log out"
+      body.style.overflow = "auto";
+      loginBtn.innerText="log out"
     logedname.innerHTML=`<i class="fa-regular fa-circle-user"></i> welcome ${userData[i].userFirstName}`
   }
   }
 })
 function getLoggedInUserData(){
   let loggedInUserData = JSON.parse(localStorage.getItem('loggedInUser'))
+  console.log(loggedInUserData);
   if(loggedInUserData){
-    return 'welcome   '+loggedInUserData.userFirstName
+    logedname.innerHTML=`<i class="fa-regular fa-circle-user"></i> welcome ${loggedInUserData.userFirstName}`;
+    loginBtn.innerText="log out";
   }
   else{
-    return 'Login'
+    logedname.innerHTML=`<i class="fa-regular fa-circle-user"></i>Log In`
   }
  
 }
-function isUserLoggedIn(){
-  let loggedInUserData = JSON.parse(localStorage.getItem('loggedInUser'))
-  if(loggedInUserData){
-    return true;
-  }
-  else{
-    return false;
-  }
-}
+getLoggedInUserData()
+// function isUserLoggedIn(){
+//   let loggedInUserData = JSON.parse(localStorage.getItem('loggedInUser'))
+//   if(loggedInUserData){
+//     return true;
+//   }
+//   else{
+//     return false;
+//   }
+// }
 
 
 // ================================================================= MAIN SECTION =================================================================//
