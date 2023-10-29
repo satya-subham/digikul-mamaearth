@@ -251,3 +251,162 @@ function deleteData(e){
           }
     }
 }
+
+
+
+// ============================================================= LOG IN =============================================================
+
+const subMenuWrap = document.querySelector(".sub-menu-wrap");
+const loginBtn = document.querySelector(".logbut");
+const crossBtn = document.querySelector("#cross");
+const header = document.querySelector("header");
+const main = document.querySelector("main");
+const loginWithOtpBtn = document.querySelector("#login_with_otp");
+const loginPhoneMunberInput = document.querySelector("#login_input");
+const signUpModal = document.querySelector(".signup_popup");
+const loginModal = document.querySelector(".login_popup");
+const signUpNumber = document.querySelector("#signup_phone_number");
+const loginNumber = document.querySelector("#login_input");
+const signUpBtn = document.querySelector("#signup_btn");
+const signInModal = document.querySelector('.signin_popup');
+const logoutModal = document.querySelector(".logout_popup");
+const logedname = document.querySelector("#login");
+// let cartContainer = document.querySelector(".cart-container");
+
+
+function toggleMenu() {
+  subMenuWrap.style.display = "block";
+}
+
+function toggleMenuRemove() {
+  subMenuWrap.style.display = "none";
+}
+
+
+const loginPopUpMainContainer = document.querySelector(
+  ".login_popup_main_container"
+);
+
+let userData = [];
+if(localStorage.getItem('userData')){
+  userData= JSON.parse(localStorage.getItem('userData'))
+}
+console.log(userData);
+
+function login() {
+  if(loginBtn.innerText=="LOGIN"){
+    cartContainer.style.display = "block";
+    subMenuWrap.style.display = "none";
+    loginPopUpMainContainer.style.display = "block";
+    body.style.overflow = "hidden";
+  }
+  else if(loginBtn.innerText=="log out"){
+    localStorage.removeItem('loggedInUser');
+    cartContainer.style.display = "block";
+    logoutModal.style.display="block";
+    body.style.overflow = "hidden";
+    setTimeout(()=>{ 
+    cartContainer.style.display = "none";
+     logoutModal.style.display="none";
+     body.style.overflow = "auto";
+    }, 2000)
+    loginBtn.innerText="LOGIN"
+    logedname.innerHTML=`<button id="login" onmouseover="toggleMenu()"><i class="fa-regular fa-circle-user"></i>Log In</button>`
+  }
+}
+
+
+function loginPopupRemove() {
+  cartContainer.style.display = "none";
+  loginPopUpMainContainer.style.display = "none";
+  body.style.overflow = "auto";
+  header.classList.toggle("active");
+}
+
+function loginWithOtp() {
+  if (loginPhoneMunberInput.value.length > 1) {
+    loginModal.remove();
+    signUpModal.style.display = "block";
+    signUpNumber.value = loginNumber.value;
+    loginPopUpMainContainer.append(signUpModal);
+  }
+}
+
+function backToLogin() {
+  signUpModal.remove();
+  loginPopUpMainContainer.append(loginModal);
+}
+
+
+
+signUpBtn.addEventListener("click", () => {
+  const fName = document.querySelector("#signup_first_name").value;
+  const lName = document.querySelector("#signup_last_name").value;
+  const eMail = document.querySelector("#signup_email_id").value;
+
+  if (!eMail.endsWith("@gmail.com")) {
+    alert("Invalid Email");
+  }
+else{
+
+  const search = userData.find((x) => {
+    return x.userEmail == eMail;
+  });
+  let userDetails = {
+    userFirstName: fName,
+    userLastName: lName,
+    userEmail: eMail,
+  };
+  if (search == undefined) {
+    userData.push(userDetails);
+    localStorage.setItem('userData',JSON.stringify(userData))
+    
+  } else {
+    alert("user already exist");
+  }
+  localStorage.setItem("loggedInUser", JSON.stringify(userDetails));
+  signUpModal.remove();
+  signInModal.style.display="block"
+  loginPopUpMainContainer.append(signInModal)
+}
+
+});
+
+const signInCrossBtn = document.querySelector('#signin_cross');
+signInCrossBtn.addEventListener('click', (event)=>{
+  signInModal.remove();
+  loginPopUpMainContainer.append(loginModal)
+  loginPopUpMainContainer.style.display = "none";
+  body.style.overflow = "auto";
+  cartContainer.style.display = "none";
+})
+
+
+const signInBtn = document.querySelector('#signin_btn');
+
+signInBtn.addEventListener('click', ()=>{
+  const signInEmail = document.querySelector('#signin_email').value;
+
+  for(let i=0; i<userData.length; i++){
+    if (userData[i].userEmail == signInEmail) {
+      loginPopUpMainContainer.style.display = "none";
+      cartContainer.style.display = "none";
+      body.style.overflow = "auto";
+      loginBtn.innerText="log out"
+    logedname.innerHTML=`<i class="fa-regular fa-circle-user"></i> welcome ${userData[i].userFirstName}`
+  }
+  }
+})
+function getLoggedInUserData(){
+  let loggedInUserData = JSON.parse(localStorage.getItem('loggedInUser'))
+  console.log(loggedInUserData);
+  if(loggedInUserData){
+    logedname.innerHTML=`<i class="fa-regular fa-circle-user"></i> welcome ${loggedInUserData.userFirstName}`;
+    loginBtn.innerText="log out";
+  }
+  else{
+    logedname.innerHTML=`<i class="fa-regular fa-circle-user"></i>Log In`
+  }
+ 
+}
+getLoggedInUserData()
