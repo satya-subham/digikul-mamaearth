@@ -396,6 +396,7 @@ window.addEventListener("DOMContentLoaded", () => {
   });
 });
 
+
 function add_to_cart(e) {
   fetch("https://mmrth-nd-api.honasa-production.net/v1/categories/31/products")
     .then((res) => res.json())
@@ -409,12 +410,12 @@ function add_to_cart(e) {
       <p class="price_name" > Rs.${item.price}</p></div>
        <div><button class="deletebutton" id=${iddval} onclick="deleteData(event)">Drop</button></div>
        </div>`;
-
           cartArr.push(item);
-          localStorage.setItem("cartCheckout", JSON.stringify(cartArr));
+          localStorage.setItem("cartCheckout", JSON.stringify(cartArr)); 
         }
       })
     );
+    
 }
 
 function deleteData(e) {
