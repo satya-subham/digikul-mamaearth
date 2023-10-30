@@ -695,7 +695,23 @@ button[id="login"]:hover{
 .cart_content4{
   width: 100%;
   height: 15%;
+}
+.Checkout{
+  width: 80%;
+  height: 40%;
+  margin: 2% 10%;
   background-color: blueviolet;
+  border: none;
+  color: white;
+  font-size: large;
+  border-radius: 0 0 5px 5px;
+  transition-duration: 1s;
+}
+.Checkout:hover {
+  background-color: white;
+  color: blueviolet;
+  border: 3px solid blueviolet;
+  cursor: pointer;
 }
 button[id="close"]{
   border: none;
