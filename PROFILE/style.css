@@ -248,6 +248,21 @@ button[id="login"]:hover {
   display: none;
 }
 
+/* ====================================== MAIN ============================================  */
+.empty{
+  width: 100%;
+  height: 123px;
+}
+.user-details-container{
+  width: 100%;
+  height: auto;
+  padding: 10px 160px;
+}
+.user-details-container div{
+  margin: 10px 0px;
+}
+
+
 /* ********************************* CART ************************** */
 
 .cart-container {

@@ -117,7 +117,7 @@ function loginPopupRemove() {
 }
 
 function loginWithOtp() {
-  if (loginPhoneMunberInput.value.length > 1) {
+  if (loginPhoneMunberInput.value.length == 10) {
     loginModal.remove();
     signUpModal.style.display = "block";
     signUpNumber.value = loginNumber.value;
@@ -136,6 +136,20 @@ signUpBtn.addEventListener("click", () => {
   const fName = document.querySelector("#signup_first_name").value;
   const lName = document.querySelector("#signup_last_name").value;
   const eMail = document.querySelector("#signup_email_id").value;
+  const mobile = signUpNumber.value;
+  const dob = document.querySelector("#signup_dob").value;
+
+  const maleRadio = document.getElementById('male');
+  const femaleRadio = document.getElementById('female');
+  const otherRadio = document.getElementById('not_specified');
+    let gender ;
+    if (maleRadio.checked) {
+        gender = maleRadio.value;
+    } else if (femaleRadio.checked) {
+        gender = femaleRadio.value;
+    } else if (otherRadio.checked) {
+      gender = otherRadio.value;
+    } 
 
   if (!eMail.endsWith("@gmail.com")) {
     alert("Invalid Email");
@@ -149,6 +163,9 @@ else{
     userFirstName: fName,
     userLastName: lName,
     userEmail: eMail,
+    userMobile: mobile,
+    userDob: dob,
+    userGender: gender,
   };
   if (search == undefined) {
     userData.push(userDetails);
@@ -243,12 +260,46 @@ window.addEventListener("DOMContentLoaded", () => {
 
 
 function deleteData(e) {
-    for (var i = 0; i < cartArr.length; i++) {
-      if (cartArr[i].id == e.target.id) {
-        cartArr.splice(i, 1);
-        e.target.parentElement.parentElement.remove();
-        localStorage.setItem("cartCheckout", JSON.stringify(cartArr));
-      }
+  for (var i = 0; i < cartArr.length; i++) {
+    if (cartArr[i].id == e.target.id) {
+      cartArr.splice(i, 1);
+      e.target.parentElement.parentElement.remove();
+      localStorage.setItem("cartCheckout", JSON.stringify(cartArr));
     }
   }
-  
+}
+
+
+
+
+let user = JSON.parse(localStorage.getItem("loggedInUser"));
+const userContainer = document.querySelector(".user-details-container");
+window.addEventListener("DOMContentLoaded", ()=>{
+  userContainer.innerHTML = `<div>
+  <h1>Welcome, ${user.userFirstName} ${user.userLastName}</h1>
+  <div>
+  <label for="email">Email: </label>
+  <input type="email" id="email" name="email" value="${user.userEmail}" readonly/>
+  </div>
+  <div>
+  <label for="fname">First Name: </label>
+  <input type="text" id="fname" name="fname" value="${user.userFirstName}" readonly/>
+  </div>
+  <div>
+  <label for="lname">Last Name: </label>
+  <input type="text" id="lname" name="lname" value="${user.userLastName}" readonly/>
+  </div>
+  <div>
+  <label for="num">Number: </label>
+  <input type="text" id="num" name="num" value="${user.userMobile}" readonly/>
+  </div>
+  <div>
+  <label for="dob">DOB: </label>
+  <input type="text" id="dob" name="dob" value="${user.userDob}" readonly/>
+  </div>
+  <div>
+  <label for="gender">Gender: </label>
+  <input type="text" id="gender" name="gender" value="${user.userGender}" readonly/>
+  </div>
+  </div>`
+})
