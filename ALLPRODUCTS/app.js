@@ -106,9 +106,12 @@ function nextImage(){
 const mainContainer = document.querySelector('.main-container');
 
 window.addEventListener('DOMContentLoaded', ()=>{
+  const loader = document.getElementById('loader');
+  loader.style.display = 'block';
     fetch('https://mmrth-nd-api.honasa-production.net/v1/categories/2/products')
     .then((response) => response.json())
     .then((data) =>{
+      loader.style.display = 'none';
         // console.log(data)
         data.bestsellers.map((item)=>{
             mainContainer.innerHTML+=`<div class="item-container">
