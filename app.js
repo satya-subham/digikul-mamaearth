@@ -281,9 +281,12 @@ function nextImage() {
 const mainContainer = document.querySelector(".main-container");
 
 window.addEventListener("DOMContentLoaded", () => {
+  const loader = document.getElementById('loader');
+  loader.style.display = 'block';
   fetch("https://mmrth-nd-api.honasa-production.net/v1/categories/31/products")
     .then((response) => response.json())
     .then((data) => {
+      loader.style.display = 'none';
       data.bestsellers.map((item) => {
         mainContainer.innerHTML += `<div class="item-container">
             <div class="best-seller">Best seller</div>

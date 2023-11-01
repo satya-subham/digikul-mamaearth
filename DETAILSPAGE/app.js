@@ -14,7 +14,7 @@ detail.innerHTML = `<div class="img-cont">
                 <img src=${images[0]} alt="" id="bigImg">
             </div>
             <div class="small-img">
-                <div class="sm-1"><img src=${images[1]} alt="" onclick="show1(event)"></div>
+                <div class="sm-1"><img src=${images[3]} alt="" onclick="show1(event)"></div>
                 <div class="sm-2"><img src=${images[2]} alt="" onclick="show2(event)"></div>
                 <div class="sm-3"><img src=${images[0]} alt="" onclick="show3(event)"></div>
             </div>
