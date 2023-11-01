@@ -117,7 +117,7 @@ function loginPopupRemove() {
 }
 
 function loginWithOtp() {
-  if (loginPhoneMunberInput.value.length > 1) {
+  if (loginPhoneMunberInput.value.length == 10) {
     loginModal.remove();
     signUpModal.style.display = "block";
     signUpNumber.value = loginNumber.value;
@@ -136,19 +136,41 @@ signUpBtn.addEventListener("click", () => {
   const fName = document.querySelector("#signup_first_name").value;
   const lName = document.querySelector("#signup_last_name").value;
   const eMail = document.querySelector("#signup_email_id").value;
+  const mobile = signUpNumber.value;
+  const dob = document.querySelector("#signup_dob").value;
+  // const gender = document.querySelector("input[name=gender]").value;
+
+  const maleRadio = document.getElementById('male');
+  const femaleRadio = document.getElementById('female');
+  const otherRadio = document.getElementById('not_specified');
+    let gender ;
+    if (maleRadio.checked) {
+        gender = maleRadio.value;
+    } else if (femaleRadio.checked) {
+        gender = femaleRadio.value;
+    } else if (otherRadio.checked) {
+      gender = otherRadio.value;
+    } 
+  
+
+  console.log(gender);
 
   if (!eMail.endsWith("@gmail.com")) {
     alert("Invalid Email");
-  }
-else{
+  }else{
 
   const search = userData.find((x) => {
     return x.userEmail == eMail;
   });
+
+
   let userDetails = {
     userFirstName: fName,
     userLastName: lName,
     userEmail: eMail,
+    userMobile: mobile,
+    userDob: dob,
+    userGender: gender,
   };
   if (search == undefined) {
     userData.push(userDetails);
