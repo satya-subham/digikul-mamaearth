@@ -104,9 +104,9 @@ function nextImage(){
 
 
 const mainContainer = document.querySelector('.main-container');
+const loader = document.getElementById('loader');
 
 window.addEventListener('DOMContentLoaded', ()=>{
-  const loader = document.getElementById('loader');
   loader.style.display = 'block';
     fetch('https://mmrth-nd-api.honasa-production.net/v1/categories/2/products')
     .then((response) => response.json())
@@ -159,9 +159,11 @@ function display(e){
 
 function searchProduct(){ 
     let product = document.getElementById('search').value;
+    loader.style.display = 'block';
     fetch('https://mmrth-nd-api.honasa-production.net/v1/categories/2/products')
     .then((response) => response.json())
     .then((data) => {
+      loader.style.display = 'none';
         let searchedProduct = data.bestsellers.filter((item) => {
             if(item.name.toLowerCase().includes(product.toLowerCase())) {
                 return item;
