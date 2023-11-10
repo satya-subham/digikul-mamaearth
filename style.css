@@ -203,6 +203,9 @@ button[id="login"]:hover{
   padding-left: 40px;
   color: rgb(46, 79, 46);
 }
+.menu a:hover{
+  color: blueviolet;
+}
 .baby-modal {
   width: auto;
   height: auto;
@@ -776,7 +779,8 @@ button[id="close"] i {
 .footer-bowl {
   /* background-color:orange; */
   margin-top: 20px;
-  width: 1150px;
+  /* width: 1150px; */
+  width: 100%;
   height: auto;
   border: 1px solid rgb(234, 234, 234);
   /* padding-bottom: 2rem; */
@@ -1019,4 +1023,54 @@ button[id="close"] i {
 @keyframes spin {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
+}
+
+
+
+
+/* *****************************************  RESPONSIVENESS ************************************* */
+
+@media screen and (min-width: 950px) and (max-width: 1250px) {
+  .logo-input-search {
+    width: 40%;
+  }
+  .menu {
+    margin-left: 40px;
+  }
+  .menu a {
+    padding-left: 20px;
+    font-size: 12px;
+  }
+  .image_name {
+    font-size: 13px;
+  }
+  .text {
+    width: 400px;
+    height: 250px;
+  }
+  .plant-details{
+    position: absolute;
+    right: 50px;
+    bottom: 70px;
+  
+  }
+  .dermatology{
+    width: 300px;
+    height: 150px;
+    
+  }
+  .approve{
+    width: 300px;
+    height: 150px;
+    
+  }
+  .certified{
+    width: 300px;
+    height: 150px;
+    
+  }
+  .sub-menu-wrap {
+    left: 70%;
+    width: 280px;
+  }
 }
