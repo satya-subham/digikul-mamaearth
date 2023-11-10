@@ -898,17 +898,6 @@ i {
   .image_name {
     font-size: 13px;
   }
-  .text {
-    width: 400px;
-    height: 250px;
-  }
-  .plant-details{
-    position: absolute;
-    right: 50px;
-    bottom: 70px;
-  
-  }
-  
   .sub-menu-wrap {
     left: 70%;
     width: 280px;
