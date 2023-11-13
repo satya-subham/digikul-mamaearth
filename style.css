@@ -777,17 +777,12 @@ button[id="close"] i {
   justify-content: center;
 }
 .footer-bowl {
-  /* background-color:orange; */
   margin-top: 20px;
-  /* width: 1150px; */
   width: 100%;
   height: auto;
   border: 1px solid rgb(234, 234, 234);
-  /* padding-bottom: 2rem; */
   margin-bottom: 1rem;
 }
-
-/* ///////////////////-- first col--/////////////////////// */
 
 .imgtruck {
   width: 38px;
@@ -1041,6 +1036,12 @@ button[id="close"] i {
     padding-left: 20px;
     font-size: 12px;
   }
+  #prev-button {
+    font-size: 40px;
+  }
+  #next-button {
+    font-size: 40px;
+  }
   .image_name {
     font-size: 13px;
   }
@@ -1072,5 +1073,183 @@ button[id="close"] i {
   .sub-menu-wrap {
     left: 70%;
     width: 280px;
+  }
+}
+
+
+
+@media screen and (min-width: 650px) and (max-width: 950px) {
+  .logo-input-search {
+    width: 40%;
+  }
+  .menu {
+    margin-left: 30px;
+  }
+  .menu a {
+    padding-left: 10px;
+    font-size: 10px;
+  }
+  .header img[id="logo"] {
+    height: auto;
+    width: 100px;
+  }
+  .header img[id="flower"] {
+    height: auto;
+    width: 100px;
+    padding: 10px;
+  }
+  button[id="search"] {
+    height: 30px;
+    padding: 1px;
+    font-size: 10px;
+    
+  }
+  input {
+    padding: 4px;
+    font-size: x-small;
+  }
+  button[id="cart"] {
+    font-size: 12px;
+  }
+  button[id="login"] {
+    font-size: 12px;
+  }
+  .cart-product-container{
+    width: 50%;
+  }
+
+  .banner-section img {
+    margin-top: 90px;
+  }
+  #prev-button {
+    font-size: 30px;
+    position: absolute;
+    top: 150px;
+    left: 50px;
+  }
+  #next-button {
+    font-size: 30px;
+    position: absolute;
+    top: 150px;
+    right: 50px;
+  }
+  .main-container {
+    margin: 30px 0px;
+  }
+  .item-container {
+    height: 400px;
+    width: 250px;
+  }
+  .item-container img {
+    width: 150px;
+    height: 150px;
+  }
+  .best-seller {
+    margin-right: 100px;
+    margin-top: -11px;
+    width: 150px;
+    height: 40px;
+    background-color: red;
+    color: white;
+    border-radius: 10px 0px 10px 0px;
+  }
+  .para {
+    color: green;
+    font-size: small;
+  }
+  .item-para,.item-price{
+    font-size: small;
+  }
+  .add-to-cart-btn {
+    width: 250px;
+    height: 40px;
+    font-size: medium;
+  }
+  .video-container iframe {
+    width: 300px;
+    height: 200px;
+  }
+  .text {
+    width: 300px;
+    height: 200px;
+    font-size: small;
+  }
+  .text div button {
+    width: auto;
+    height: 25px;
+    padding: 5px;
+    font-size: small;
+  }
+  .plant-details button{
+    width: auto;
+    height: 20px;
+    padding: 2px;
+  }
+  .image_name {
+    font-size: 13px;
+  }
+  .text {
+    width: 400px;
+    height: 250px;
+  }
+  .plant-details{
+    position: absolute;
+    right: 40px;
+    bottom: 60px;
+    font-size: small;
+  }
+  .dermatology{
+    width: 200px;
+    height: 100px;
+    font-size: small;
+  }
+  .dermatology div img{
+    width: 80px;
+    height: 80px;
+  }
+  .approve{
+    width: 200px;
+    height: 100px;
+    font-size: small;
+    
+  }
+  .approve div img{
+    width: 80px;
+    height: 80px;
+  }
+  .certified{
+    width: 200px;
+    height: 100px;
+    font-size: small;
+    
+  }
+  .certified div img{
+    width: 80px;
+    height: 80px;
+  }
+  .sub-menu-wrap {
+    left: 55%;
+    width: 280px;
+  }
+  #first-col div{
+    font-size: small;
+  }
+  .imgtruck {
+    width: 25px;
+    height: 25px;
+  }
+  
+  
+  .contactus-bowl{
+    font-size: small;
+  }
+  #contact-btn {
+    width: 150px;
+    height: 50px;
+  }
+  .contactus-bowl {
+    text-align: center;
+    padding-top: 20px;
+    padding-left: 7rem;
   }
 }

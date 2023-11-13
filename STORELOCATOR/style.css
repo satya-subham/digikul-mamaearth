@@ -910,3 +910,93 @@ i {
     bottom: 15%;
   }
 }
+
+
+
+
+@media screen and (min-width: 650px) and (max-width: 950px) {
+  .logo-input-search {
+    width: 40%;
+  }
+  .menu {
+    margin-left: 30px;
+  }
+  .menu a {
+    padding-left: 10px;
+    font-size: 10px;
+  }
+  .header img[id="logo"] {
+    height: auto;
+    width: 100px;
+  }
+  .header img[id="flower"] {
+    height: auto;
+    width: 100px;
+    padding: 10px;
+  }
+  button[id="search"] {
+    height: 30px;
+    padding: 1px;
+    font-size: 10px;
+    
+  }
+  input {
+    padding: 4px;
+    font-size: x-small;
+  }
+  button[id="cart"] {
+    font-size: 12px;
+  }
+  button[id="login"] {
+    font-size: 12px;
+  }
+  .cart-product-container{
+    width: 50%;
+  }
+  .image_name {
+    font-size: 10px;
+  }
+  iframe {
+    width: 300px;
+    height: 200px;
+    left: 50%;
+    bottom: 25%;
+  }
+  .ul li {
+    margin: 150px 0px 0px 0px;
+    font-size: 1.5em;
+  }
+  .product div{
+    margin-top: 20px;
+    margin-bottom: 10px;
+    display: none;
+  }
+  .product div p {
+    font-size: x-small;
+  }
+  .sub-menu-wrap {
+    left: 55%;
+    width: 280px;
+  }
+  #first-col div{
+    font-size: small;
+  }
+  .imgtruck {
+    width: 25px;
+    height: 25px;
+  }
+  
+  
+  .contactus-bowl{
+    font-size: small;
+  }
+  #contact-btn {
+    width: 150px;
+    height: 50px;
+  }
+  .contactus-bowl {
+    text-align: center;
+    padding-top: 20px;
+    padding-left: 7rem;
+  }
+}
