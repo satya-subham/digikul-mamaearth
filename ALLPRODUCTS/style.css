@@ -955,3 +955,130 @@ button[id="close"] i {
     width: 280px;
   }
 }
+
+
+@media screen and (min-width: 650px) and (max-width: 950px) {
+  .logo-input-search {
+    width: 40%;
+  }
+  .menu {
+    margin-left: 30px;
+  }
+  .menu a {
+    padding-left: 10px;
+    font-size: 10px;
+  }
+  .header img[id="logo"] {
+    height: auto;
+    width: 100px;
+  }
+  .header img[id="flower"] {
+    height: auto;
+    width: 100px;
+    padding: 10px;
+  }
+  button[id="search"] {
+    height: 30px;
+    padding: 1px;
+    font-size: 10px;
+    
+  }
+  input {
+    padding: 4px;
+    font-size: x-small;
+  }
+  button[id="cart"] {
+    font-size: 12px;
+  }
+  button[id="login"] {
+    font-size: 12px;
+  }
+  .cart-product-container{
+    width: 50%;
+  }
+
+  .banner-section img {
+    margin-top: 90px;
+  }
+  #prev-button {
+    font-size: 30px;
+    position: absolute;
+    top: 150px;
+    left: 50px;
+  }
+  #next-button {
+    font-size: 30px;
+    position: absolute;
+    top: 150px;
+    right: 50px;
+  }
+  select {
+    width: 200px;
+    height: 30px;
+    margin: 40px 0px 0px 70px;
+    outline: none;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: 500;
+    font-size: smaller;
+  }
+  .item-container {
+    height: 400px;
+    width: 250px;
+  }
+  .item-container img {
+    width: 150px;
+    height: 150px;
+  }
+  .best-seller {
+    margin-right: 100px;
+    margin-top: -12px;
+    width: 150px;
+    height: 40px;
+    background-color: red;
+    color: white;
+    border-radius: 10px 0px 10px 0px;
+  }
+  .para {
+    color: green;
+    font-size: small;
+  }
+  .item-para,.item-price{
+    font-size: small;
+  }
+  .add-to-cart-btn {
+    width: 250px;
+    height: 40px;
+    font-size: medium;
+  }
+  
+  .image_name {
+    font-size: 13px;
+  }
+  
+  
+  .sub-menu-wrap {
+    left: 55%;
+    width: 280px;
+  }
+  #first-col div{
+    font-size: small;
+  }
+  .imgtruck {
+    width: 25px;
+    height: 25px;
+  }
+  
+  
+  .contactus-bowl{
+    font-size: small;
+  }
+  #contact-btn {
+    width: 150px;
+    height: 50px;
+  }
+  .contactus-bowl {
+    text-align: center;
+    padding-top: 20px;
+    padding-left: 7rem;
+  }
+}

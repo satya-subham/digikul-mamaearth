@@ -117,11 +117,11 @@ window.addEventListener('DOMContentLoaded', ()=>{
             mainContainer.innerHTML+=`<div class="item-container">
             <div class="best-seller">Best seller</div>
             <img src=${item.images[0]} alt="" id="home_img_${item.id}" onclick="display(event)"/>
-            <p>${item.name}</p>
+            <p class="item-para">${item.name}</p>
             <p class="para"><i class="fa-solid fa-star rate"></i>${
                 (5 * parseInt(item.avg_rating_percent)) / 100
               }<span> | ${item.review_count} reviews<span></p>
-              <p>Rs.${item.price}</p>
+              <p class="item-price">Rs.${item.price}</p>
               <button id="cart_${item.id}" class="add-to-cart-btn" onclick="add_to_cart(event)">Add to cart</button>
             
             </div>`
@@ -174,11 +174,11 @@ function searchProduct(){
             mainContainer.innerHTML+=`<div class="item-container">
             <div class="best-seller">Best seller</div>
             <img src=${item.images[0]} alt="" id="home_img_${item.id}" onclick="display(event)"/>
-            <p>${item.name}</p>
+            <p class="item-para">${item.name}</p>
             <p class="para"><i class="fa-solid fa-star rate"></i>${
                 (5 * parseInt(item.avg_rating_percent)) / 100
               }<span> | ${item.review_count} reviews<span></p>
-              <p>Rs.${item.price}</p>
+              <p class="item-price">Rs.${item.price}</p>
               <button id="cart_${item.id}" class="add-to-cart-btn" onclick="add_to_cart(event)">Add to cart</button>
             
             </div>`
@@ -225,11 +225,11 @@ function getValue() {
             mainContainer.innerHTML+=`<div class="item-container">
             <div class="best-seller">Best seller</div>
             <img src=${item.images[0]} alt="" id="home_img_${item.id}" onclick="display(event)"/>
-            <p>${item.name}</p>
+            <p class="item-para">${item.name}</p>
             <p class="para"><i class="fa-solid fa-star rate"></i>${
                 (5 * parseInt(item.avg_rating_percent)) / 100
               }<span> | ${item.review_count} reviews<span></p>
-              <p>Rs.${item.price}</p>
+              <p class="item-price">Rs.${item.price}</p>
               <button id="cart_${item.id}" class="add-to-cart-btn" onclick="add_to_cart(event)">Add to cart</button>
             
             </div>`
